@@ -1,0 +1,532 @@
+{
+  "track": {
+    "title": "Difficult Conversations",
+    "slug": "difficult-conversations",
+    "description": "Practical, evidence-based skills for handling feedback, conflict, and disagreement without damaging the relationship.",
+    "icon": "message-circle",
+    "order_index": 2,
+    "is_published": true
+  },
+  "lessons": [
+    {
+      "title": "Active Listening Basics",
+      "order_index": 1,
+      "xp_reward": 10,
+      "mastery_threshold": 70,
+      "questions": [
+        {
+          "type": "mcq",
+          "prompt": "A friend is venting about a bad day. Instead of offering advice, you say, 'That sounds really frustrating — tell me more about what happened.' What listening technique is this?",
+          "explanation": "This is reflective listening — acknowledging the other person's emotion and inviting them to continue, rather than jumping straight to problem-solving, which research shows tends to make people feel more heard and understood.",
+          "source_citation": "Rogers, C. R., & Farson, R. E. (1957). Active Listening. Industrial Relations Center, University of Chicago.",
+          "options": [
+            { "label": "Reflective listening", "is_correct": true },
+            { "label": "Anchoring", "is_correct": false },
+            { "label": "Confirmation bias", "is_correct": false },
+            { "label": "Sunk cost reasoning", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Which of these is a core component of active listening, according to Carl Rogers' original framework?",
+          "explanation": "Suspending judgment while the other person speaks — rather than mentally preparing a rebuttal — is central to active listening, since it allows genuine understanding before evaluation or response.",
+          "source_citation": "Rogers, C. R., & Farson, R. E. (1957). Active Listening. Industrial Relations Center, University of Chicago.",
+          "options": [
+            { "label": "Suspending judgment while the other person is speaking", "is_correct": true },
+            { "label": "Planning your response while they're still talking", "is_correct": false },
+            { "label": "Interrupting to correct inaccuracies immediately", "is_correct": false },
+            { "label": "Changing the subject to something more positive", "is_correct": false }
+          ]
+        },
+        {
+          "type": "scenario",
+          "prompt": "During a conversation, you paraphrase what the other person just said in your own words before responding with your own point. What purpose does this paraphrasing serve?",
+          "explanation": "Paraphrasing confirms you've correctly understood the other person's meaning before responding, and signals to them that they were actually heard — both of which reduce miscommunication and defensiveness.",
+          "source_citation": "Rogers, C. R., & Farson, R. E. (1957). Active Listening. Industrial Relations Center, University of Chicago.",
+          "options": [
+            { "label": "It confirms understanding and signals the person was heard", "is_correct": true },
+            { "label": "It proves you disagree with them", "is_correct": false },
+            { "label": "It ends the conversation faster", "is_correct": false },
+            { "label": "It has no real communicative purpose", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "What's the difference between listening to respond and listening to understand?",
+          "explanation": "Listening to respond means most of your attention is on formulating your next point, while listening to understand means your attention is on genuinely grasping the other person's meaning first — the latter is the foundation of active listening.",
+          "source_citation": "Rogers, C. R., & Farson, R. E. (1957). Active Listening. Industrial Relations Center, University of Chicago.",
+          "options": [
+            { "label": "Listening to respond focuses on your reply; listening to understand focuses on their meaning", "is_correct": true },
+            { "label": "There is no meaningful difference", "is_correct": false },
+            { "label": "Listening to respond is always the better approach", "is_correct": false },
+            { "label": "Listening to understand means staying completely silent forever", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Which nonverbal behavior most supports active listening in a face-to-face conversation?",
+          "explanation": "Consistent eye contact and an open posture signal attentiveness and engagement, both of which are commonly cited nonverbal components that reinforce active listening.",
+          "source_citation": "Rogers, C. R., & Farson, R. E. (1957). Active Listening. Industrial Relations Center, University of Chicago.",
+          "options": [
+            { "label": "Maintaining eye contact and an open posture", "is_correct": true },
+            { "label": "Checking your phone periodically", "is_correct": false },
+            { "label": "Looking away to appear relaxed", "is_correct": false },
+            { "label": "Crossing your arms and looking down", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "A coworker says, 'I'm fine,' but their tone and body language suggest otherwise. What would active listening prompt you to do?",
+          "explanation": "Active listening involves attending to more than just literal words — noticing tone and body language, and gently checking in, shows genuine attentiveness rather than taking a surface-level answer at face value.",
+          "source_citation": "Rogers, C. R., & Farson, R. E. (1957). Active Listening. Industrial Relations Center, University of Chicago.",
+          "options": [
+            { "label": "Gently acknowledge the mismatch and check in with them", "is_correct": true },
+            { "label": "Take the word 'fine' at face value and move on immediately", "is_correct": false },
+            { "label": "Point out that they're lying", "is_correct": false },
+            { "label": "Ignore their tone entirely", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Why might immediately offering solutions during someone's emotional venting sometimes backfire?",
+          "explanation": "When someone is venting, they often want to feel heard and understood first — jumping straight to solutions can feel like their emotions are being brushed aside or that the listener is trying to end the conversation quickly.",
+          "source_citation": "Rogers, C. R., & Farson, R. E. (1957). Active Listening. Industrial Relations Center, University of Chicago.",
+          "options": [
+            { "label": "It can feel like their emotions were skipped over rather than heard", "is_correct": true },
+            { "label": "Solutions are always unwelcome in every conversation", "is_correct": false },
+            { "label": "It has no effect on how the conversation feels", "is_correct": false },
+            { "label": "It always makes the other person feel better", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Which of the following is an example of a good open-ended question that supports active listening?",
+          "explanation": "Open-ended questions invite the other person to elaborate in their own words, giving you more genuine information and signaling real interest — compared to closed yes/no questions that can shut a conversation down.",
+          "source_citation": "Rogers, C. R., & Farson, R. E. (1957). Active Listening. Industrial Relations Center, University of Chicago.",
+          "options": [
+            { "label": "'What was that experience like for you?'", "is_correct": true },
+            { "label": "'Are you done talking now?'", "is_correct": false },
+            { "label": "'Isn't that a bit of an overreaction?'", "is_correct": false },
+            { "label": "'Did you finish?'", "is_correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Giving Difficult Feedback",
+      "order_index": 2,
+      "xp_reward": 10,
+      "mastery_threshold": 70,
+      "questions": [
+        {
+          "type": "mcq",
+          "prompt": "Which is generally better feedback: 'You're careless with details' or 'The report had three data errors that changed the conclusion'?",
+          "explanation": "Specific, behavior-focused feedback describes an observable action and its impact rather than making a broad judgment about someone's character, which tends to be more actionable and less likely to trigger defensiveness.",
+          "source_citation": "Stone, D., Patton, B., & Heen, S. (1999). Difficult Conversations: How to Discuss What Matters Most. Viking.",
+          "options": [
+            { "label": "'The report had three data errors that changed the conclusion'", "is_correct": true },
+            { "label": "'You're careless with details'", "is_correct": false },
+            { "label": "Both are equally effective", "is_correct": false },
+            { "label": "Neither should ever be said", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "The 'Situation-Behavior-Impact' feedback model asks you to describe what three things?",
+          "explanation": "This widely used model structures feedback around a concrete situation, a specific observed behavior, and the resulting impact — keeping feedback factual and reducing the chance it feels like a personal attack.",
+          "source_citation": "Center for Creative Leadership. SBI Feedback Model.",
+          "options": [
+            { "label": "The specific situation, the observed behavior, and its impact", "is_correct": true },
+            { "label": "The person's personality, history, and reputation", "is_correct": false },
+            { "label": "Your opinion, your mood, and your goals", "is_correct": false },
+            { "label": "The weather, the time, and the location", "is_correct": false }
+          ]
+        },
+        {
+          "type": "scenario",
+          "prompt": "A manager wants to give feedback about a missed deadline. Which opening is more likely to keep the other person receptive rather than defensive?",
+          "explanation": "Starting with a specific, observable fact ('the deadline was missed by two days') rather than a broad character judgment ('you're unreliable') keeps the conversation focused on the actual event, reducing defensiveness.",
+          "source_citation": "Stone, D., Patton, B., & Heen, S. (1999). Difficult Conversations: How to Discuss What Matters Most. Viking.",
+          "options": [
+            { "label": "'The deadline was missed by two days — can we talk through what happened?'", "is_correct": true },
+            { "label": "'You're always unreliable and it's a real problem.'", "is_correct": false },
+            { "label": "'I guess you just don't care about this project.'", "is_correct": false },
+            { "label": "'Everyone on the team is annoyed with you.'", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Why does 'Difficult Conversations' (Stone, Patton, Heen) recommend separating intent from impact when giving feedback?",
+          "explanation": "The authors emphasize that you can only directly observe someone's impact on you, not their intent — assuming negative intent based only on impact often leads to unfair accusations and unnecessary conflict.",
+          "source_citation": "Stone, D., Patton, B., & Heen, S. (1999). Difficult Conversations: How to Discuss What Matters Most. Viking.",
+          "options": [
+            { "label": "You can observe someone's impact, but you can't actually know their intent", "is_correct": true },
+            { "label": "Intent and impact are always identical", "is_correct": false },
+            { "label": "Impact never matters in feedback", "is_correct": false },
+            { "label": "Intent should always be assumed to be negative", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "What's a key benefit of giving feedback promptly rather than waiting weeks or months?",
+          "explanation": "Timely feedback is tied to a specific, recent, and clearly recalled event, which makes the conversation more concrete and actionable than raising an issue long after the details have faded from memory.",
+          "source_citation": "Center for Creative Leadership. SBI Feedback Model.",
+          "options": [
+            { "label": "The event is still fresh and specific in everyone's memory", "is_correct": true },
+            { "label": "It allows you to build a longer list of complaints", "is_correct": false },
+            { "label": "Delayed feedback is always more effective", "is_correct": false },
+            { "label": "There is no benefit to timing", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "A common feedback structure sandwiches criticism between two compliments (the 'feedback sandwich'). What's a known downside of this approach?",
+          "explanation": "Research and practitioner experience suggest that if used too predictably, the sandwich technique can make the positive comments feel insincere or make the person tune out, waiting for the 'real' criticism in the middle.",
+          "source_citation": "Center for Creative Leadership. SBI Feedback Model.",
+          "options": [
+            { "label": "The praise can start to feel insincere or predictable", "is_correct": true },
+            { "label": "It always guarantees the feedback is ignored entirely", "is_correct": false },
+            { "label": "It has been proven to have no downsides at all", "is_correct": false },
+            { "label": "It legally cannot be used in workplaces", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Which question is most useful to ask yourself before giving critical feedback?",
+          "explanation": "Clarifying your goal helps ensure the feedback is constructive and future-focused, rather than driven by frustration or a need to vent, which tends to produce more useful and better-received conversations.",
+          "source_citation": "Stone, D., Patton, B., & Heen, S. (1999). Difficult Conversations: How to Discuss What Matters Most. Viking.",
+          "options": [
+            { "label": "'What outcome am I hoping this feedback leads to?'", "is_correct": true },
+            { "label": "'How can I make this feel as bad as possible for them?'", "is_correct": false },
+            { "label": "'Can I avoid saying this at all costs?'", "is_correct": false },
+            { "label": "'How can I bring up every past mistake at once?'", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "After giving feedback, what does 'Difficult Conversations' suggest doing to make it a two-way conversation rather than a one-way lecture?",
+          "explanation": "Inviting the other person's perspective turns feedback into a dialogue rather than a monologue, often surfacing context you didn't have and making the person more likely to genuinely engage with the feedback.",
+          "source_citation": "Stone, D., Patton, B., & Heen, S. (1999). Difficult Conversations: How to Discuss What Matters Most. Viking.",
+          "options": [
+            { "label": "Ask for their perspective on what happened", "is_correct": true },
+            { "label": "End the conversation immediately after speaking", "is_correct": false },
+            { "label": "Repeat the same point louder", "is_correct": false },
+            { "label": "Avoid letting them respond at all", "is_correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "De-escalating Conflict",
+      "order_index": 3,
+      "xp_reward": 10,
+      "mastery_threshold": 70,
+      "questions": [
+        {
+          "type": "mcq",
+          "prompt": "During a heated argument, one person's voice starts rising and their words speed up. What physiological state does this often reflect?",
+          "explanation": "This pattern often reflects what researcher John Gottman calls 'flooding' — a state of physiological arousal where rational, measured discussion becomes difficult, often signaling it's time to pause rather than push forward.",
+          "source_citation": "Gottman, J. M., & Silver, N. (1999). The Seven Principles for Making Marriage Work. Crown Publishers.",
+          "options": [
+            { "label": "Physiological flooding / heightened arousal", "is_correct": true },
+            { "label": "Complete calm and rational thought", "is_correct": false },
+            { "label": "The sunk cost fallacy", "is_correct": false },
+            { "label": "Confirmation bias", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "When someone is 'flooded' during an argument, what does research suggest is often the most effective immediate step?",
+          "explanation": "Taking a structured break — often suggested as at least 20 minutes — allows physiological arousal to settle before productive conversation can resume, since attempts to reason during flooding tend to be unproductive.",
+          "source_citation": "Gottman, J. M., & Silver, N. (1999). The Seven Principles for Making Marriage Work. Crown Publishers.",
+          "options": [
+            { "label": "Take a break to let physiological arousal settle before continuing", "is_correct": true },
+            { "label": "Raise your voice louder to be heard", "is_correct": false },
+            { "label": "Bring up unrelated past arguments", "is_correct": false },
+            { "label": "Keep pushing until the issue is resolved immediately", "is_correct": false }
+          ]
+        },
+        {
+          "type": "scenario",
+          "prompt": "In a disagreement, one partner says: 'You NEVER listen to me, you ALWAYS do this.' What communication pattern is this, and why does it tend to escalate conflict?",
+          "explanation": "Absolute language like 'always' and 'never' tends to feel like a sweeping character attack rather than feedback about a specific instance, which often triggers defensiveness and escalates rather than resolves the disagreement.",
+          "source_citation": "Gottman, J. M., & Silver, N. (1999). The Seven Principles for Making Marriage Work. Crown Publishers.",
+          "options": [
+            { "label": "Absolute language ('always'/'never') that feels like a sweeping attack", "is_correct": true },
+            { "label": "Calm, specific, de-escalating language", "is_correct": false },
+            { "label": "A neutral statement of fact", "is_correct": false },
+            { "label": "Active listening", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Which of these is an example of a 'soft startup' to a difficult conversation, as opposed to a harsh one?",
+          "explanation": "A soft startup raises the issue calmly, focuses on your own experience with an 'I' statement, and avoids blame — research shows how a conversation begins strongly predicts how it will end.",
+          "source_citation": "Gottman, J. M., & Silver, N. (1999). The Seven Principles for Making Marriage Work. Crown Publishers.",
+          "options": [
+            { "label": "'I felt overlooked when the decision was made without me — can we talk about it?'", "is_correct": true },
+            { "label": "'You always shut me out of every decision!'", "is_correct": false },
+            { "label": "'Why do you constantly disrespect me?'", "is_correct": false },
+            { "label": "'You clearly don't care what I think.'", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "What does it mean to 'stay on the issue' during a conflict, rather than letting it expand?",
+          "explanation": "Staying focused on the specific, current issue — rather than dragging in unrelated grievances from the past — keeps the conversation manageable and prevents it from spiraling into a much larger, harder-to-resolve conflict.",
+          "source_citation": "Gottman, J. M., & Silver, N. (1999). The Seven Principles for Making Marriage Work. Crown Publishers.",
+          "options": [
+            { "label": "Avoiding bringing in unrelated past grievances", "is_correct": true },
+            { "label": "Bringing up every past disagreement at once", "is_correct": false },
+            { "label": "Refusing to discuss the actual issue at all", "is_correct": false },
+            { "label": "Changing the subject as often as possible", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "During a tense conversation, briefly acknowledging the other person's point ('I see why that would be frustrating') before responding tends to have what effect?",
+          "explanation": "Acknowledgment signals that the other person's perspective has registered, which can lower defensiveness and make them more receptive to hearing your side, even if you ultimately disagree.",
+          "source_citation": "Gottman, J. M., & Silver, N. (1999). The Seven Principles for Making Marriage Work. Crown Publishers.",
+          "options": [
+            { "label": "It tends to lower defensiveness and increase receptiveness", "is_correct": true },
+            { "label": "It always means you're agreeing with everything they said", "is_correct": false },
+            { "label": "It has no effect on the conversation", "is_correct": false },
+            { "label": "It usually escalates the conflict further", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Which of Gottman's research-identified behaviors is considered especially damaging to a relationship during conflict?",
+          "explanation": "Contempt — communicating disgust or superiority, such as through sarcasm, eye-rolling, or mockery — was found in Gottman's research to be a particularly strong predictor of relationship breakdown, more so than most other negative behaviors.",
+          "source_citation": "Gottman, J. M., & Silver, N. (1999). The Seven Principles for Making Marriage Work. Crown Publishers.",
+          "options": [
+            { "label": "Contempt (e.g. sarcasm, mockery, eye-rolling)", "is_correct": true },
+            { "label": "Asking a clarifying question", "is_correct": false },
+            { "label": "Taking a short break to cool down", "is_correct": false },
+            { "label": "Using a specific, calm 'I' statement", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Why might agreeing on a specific time to revisit a heated topic (rather than dropping it entirely) be more effective than either continuing to argue or avoiding it forever?",
+          "explanation": "Scheduling a specific time to return to the issue respects the need to cool down while still ensuring the topic actually gets resolved, avoiding both unproductive escalation and unresolved resentment from permanent avoidance.",
+          "source_citation": "Gottman, J. M., & Silver, N. (1999). The Seven Principles for Making Marriage Work. Crown Publishers.",
+          "options": [
+            { "label": "It allows time to cool down while ensuring the issue still gets addressed", "is_correct": true },
+            { "label": "It guarantees the issue will never come up again", "is_correct": false },
+            { "label": "It is exactly the same as continuing to argue right now", "is_correct": false },
+            { "label": "It has no real benefit over just avoiding the topic forever", "is_correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Setting Healthy Boundaries",
+      "order_index": 4,
+      "xp_reward": 10,
+      "mastery_threshold": 70,
+      "questions": [
+        {
+          "type": "mcq",
+          "prompt": "A coworker frequently asks you to take on extra tasks outside your role. You say, 'I can't take that on right now, but I can help you find someone who can.' What is this an example of?",
+          "explanation": "This is a clear, respectful boundary — it states a limit directly without over-explaining or apologizing excessively, while still offering a constructive alternative, which research on assertiveness identifies as an effective approach.",
+          "source_citation": "Alberti, R., & Emmons, M. (2017). Your Perfect Right: Assertiveness and Equality in Your Life and Relationships. New Harbinger Publications.",
+          "options": [
+            { "label": "A clear, respectful boundary", "is_correct": true },
+            { "label": "The sunk cost fallacy", "is_correct": false },
+            { "label": "Confirmation bias", "is_correct": false },
+            { "label": "Contempt", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "What is the key difference between assertiveness and aggressiveness when setting a boundary?",
+          "explanation": "Assertiveness expresses your own needs clearly while still respecting the other person, whereas aggressiveness disregards or violates the other person's needs and rights in the process of expressing your own.",
+          "source_citation": "Alberti, R., & Emmons, M. (2017). Your Perfect Right: Assertiveness and Equality in Your Life and Relationships. New Harbinger Publications.",
+          "options": [
+            { "label": "Assertiveness respects the other person's rights; aggressiveness disregards them", "is_correct": true },
+            { "label": "They are exactly the same thing", "is_correct": false },
+            { "label": "Aggressiveness is always more effective long-term", "is_correct": false },
+            { "label": "Assertiveness means avoiding the topic entirely", "is_correct": false }
+          ]
+        },
+        {
+          "type": "scenario",
+          "prompt": "Someone repeatedly cancels plans on you last-minute. Which response best sets a boundary without being either passive or aggressive?",
+          "explanation": "This response states the impact clearly and proposes a specific, reasonable boundary going forward — it's direct and respectful, rather than silently resentful (passive) or attacking the person's character (aggressive).",
+          "source_citation": "Alberti, R., & Emmons, M. (2017). Your Perfect Right: Assertiveness and Equality in Your Life and Relationships. New Harbinger Publications.",
+          "options": [
+            { "label": "'When plans get cancelled last-minute, it's hard for me to plan my time. Can we agree on more notice going forward?'", "is_correct": true },
+            { "label": "Saying nothing and quietly feeling resentful each time", "is_correct": false },
+            { "label": "'You're the most unreliable person I know.'", "is_correct": false },
+            { "label": "Cancelling on them without explanation as payback", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Why do many people feel guilty when first setting a boundary, even when the boundary is reasonable?",
+          "explanation": "People who are used to prioritizing others' needs or avoiding conflict often initially feel guilt when asserting their own needs, even though maintaining reasonable boundaries is a normal and healthy part of relationships.",
+          "source_citation": "Alberti, R., & Emmons, M. (2017). Your Perfect Right: Assertiveness and Equality in Your Life and Relationships. New Harbinger Publications.",
+          "options": [
+            { "label": "They may be unused to prioritizing their own needs over avoiding conflict", "is_correct": true },
+            { "label": "All boundaries are inherently selfish and wrong", "is_correct": false },
+            { "label": "Guilt means the boundary must be unreasonable", "is_correct": false },
+            { "label": "It only happens to people with no self-respect", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "A boundary is best understood as a statement about what?",
+          "explanation": "Effective boundaries focus on what you will or won't do — something within your control — rather than trying to dictate or control someone else's behavior directly, which they may or may not choose to change.",
+          "source_citation": "Alberti, R., & Emmons, M. (2017). Your Perfect Right: Assertiveness and Equality in Your Life and Relationships. New Harbinger Publications.",
+          "options": [
+            { "label": "What you will or won't do — not a demand for someone else to change", "is_correct": true },
+            { "label": "A demand that controls someone else's behavior directly", "is_correct": false },
+            { "label": "A punishment for past behavior", "is_correct": false },
+            { "label": "A permanent, one-time statement that never needs restating", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "When someone reacts negatively to a reasonable boundary you've set, what does assertiveness research suggest about staying firm?",
+          "explanation": "A negative reaction to a reasonable boundary doesn't automatically mean the boundary was wrong — it's common for people to initially resist a change to a dynamic they were previously benefiting from, and consistency matters.",
+          "source_citation": "Alberti, R., & Emmons, M. (2017). Your Perfect Right: Assertiveness and Equality in Your Life and Relationships. New Harbinger Publications.",
+          "options": [
+            { "label": "A negative reaction doesn't automatically mean the boundary was wrong", "is_correct": true },
+            { "label": "You should always immediately abandon the boundary", "is_correct": false },
+            { "label": "Negative reactions never happen to reasonable boundaries", "is_correct": false },
+            { "label": "You should apologize repeatedly until they're comfortable", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Which phrase is an example of an over-explained, apology-heavy way of setting a boundary, which assertiveness training generally advises against?",
+          "explanation": "Excessive apologizing and over-justifying can undermine a boundary and signal uncertainty — assertiveness training generally recommends stating the boundary clearly and directly, without needing extensive justification.",
+          "source_citation": "Alberti, R., & Emmons, M. (2017). Your Perfect Right: Assertiveness and Equality in Your Life and Relationships. New Harbinger Publications.",
+          "options": [
+            { "label": "'I'm SO sorry, I feel terrible, I know this is probably unreasonable, but maybe possibly I can't do this?'", "is_correct": true },
+            { "label": "'I'm not able to take this on right now.'", "is_correct": false },
+            { "label": "'That doesn't work for me — here's what I can do instead.'", "is_correct": false },
+            { "label": "'I need to say no to this one.'", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Why might setting a boundary at work (e.g. not answering emails after hours) actually improve a working relationship over time?",
+          "explanation": "Clear boundaries reduce built-up resentment and burnout, which tend to erode relationships over time — a sustainable, respected boundary often supports a healthier, more consistent working relationship than one built on quiet overextension.",
+          "source_citation": "Alberti, R., & Emmons, M. (2017). Your Perfect Right: Assertiveness and Equality in Your Life and Relationships. New Harbinger Publications.",
+          "options": [
+            { "label": "It can reduce resentment and burnout that would otherwise erode the relationship", "is_correct": true },
+            { "label": "It guarantees the other person will never be frustrated again", "is_correct": false },
+            { "label": "It has no effect on the relationship either way", "is_correct": false },
+            { "label": "It always damages the relationship permanently", "is_correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Navigating Disagreement Productively",
+      "order_index": 5,
+      "xp_reward": 10,
+      "mastery_threshold": 70,
+      "questions": [
+        {
+          "type": "mcq",
+          "prompt": "Two coworkers disagree on a project approach. Instead of trying to 'win,' one says, 'Help me understand why you think that approach works better.' What does this reflect?",
+          "explanation": "This reflects a curiosity-based approach to disagreement — seeking to understand the other person's reasoning rather than immediately defending your own position, which tends to lead to more productive outcomes than a purely adversarial stance.",
+          "source_citation": "Stone, D., Patton, B., & Heen, S. (1999). Difficult Conversations: How to Discuss What Matters Most. Viking.",
+          "options": [
+            { "label": "A curiosity-based approach to disagreement", "is_correct": true },
+            { "label": "Avoidance of the disagreement entirely", "is_correct": false },
+            { "label": "The sunk cost fallacy", "is_correct": false },
+            { "label": "Contempt", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "What is the difference between the 'what happened' conversation and the 'feelings' conversation in a disagreement, according to Difficult Conversations?",
+          "explanation": "The authors describe every difficult conversation as layered — one part is about facts and differing interpretations of events, and a separate part is about the emotions involved — treating these as one blurred conversation often causes confusion.",
+          "source_citation": "Stone, D., Patton, B., & Heen, S. (1999). Difficult Conversations: How to Discuss What Matters Most. Viking.",
+          "options": [
+            { "label": "One is about facts/interpretations, the other is about the emotions involved", "is_correct": true },
+            { "label": "They are the exact same conversation", "is_correct": false },
+            { "label": "The feelings conversation should always be avoided", "is_correct": false },
+            { "label": "Only the 'what happened' conversation matters", "is_correct": false }
+          ]
+        },
+        {
+          "type": "scenario",
+          "prompt": "In a disagreement about a shared decision, one person says, 'Maybe we're both seeing different parts of this — what am I missing from your side?' Why is this framing effective?",
+          "explanation": "This framing treats the disagreement as a shared puzzle to solve together rather than a battle to win, which tends to lower defensiveness and open the door to a more collaborative, productive conversation.",
+          "source_citation": "Stone, D., Patton, B., & Heen, S. (1999). Difficult Conversations: How to Discuss What Matters Most. Viking.",
+          "options": [
+            { "label": "It frames the disagreement as a shared puzzle rather than a battle", "is_correct": true },
+            { "label": "It proves the other person is wrong", "is_correct": false },
+            { "label": "It ends the conversation immediately", "is_correct": false },
+            { "label": "It has no effect on how the conversation unfolds", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Why do two people often walk away from the same event with genuinely different accounts of what happened?",
+          "explanation": "Each person's account is shaped by their own vantage point, assumptions, and selective attention — this doesn't necessarily mean one person is lying, but that each has a partial, subjective interpretation of the same events.",
+          "source_citation": "Stone, D., Patton, B., & Heen, S. (1999). Difficult Conversations: How to Discuss What Matters Most. Viking.",
+          "options": [
+            { "label": "Each person's account is shaped by their own vantage point and assumptions", "is_correct": true },
+            { "label": "One of them must always be lying", "is_correct": false },
+            { "label": "Memory is always 100% objective and accurate", "is_correct": false },
+            { "label": "This never actually happens in real conversations", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Which mindset shift helps most when entering a disagreement you expect to be difficult?",
+          "explanation": "Approaching the conversation with curiosity about the other person's perspective, rather than a fixed goal of proving them wrong, tends to keep the conversation more open and productive, according to conflict communication research.",
+          "source_citation": "Stone, D., Patton, B., & Heen, S. (1999). Difficult Conversations: How to Discuss What Matters Most. Viking.",
+          "options": [
+            { "label": "Approaching it with curiosity about their perspective, not just proving your point", "is_correct": true },
+            { "label": "Deciding in advance that you must win at all costs", "is_correct": false },
+            { "label": "Avoiding the conversation until the issue resolves itself", "is_correct": false },
+            { "label": "Assuming the other person has bad intentions", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "During a disagreement, saying 'I' statements (e.g. 'I felt confused by that decision') rather than 'you' statements (e.g. 'you confused everyone') tends to have what effect?",
+          "explanation": "'I' statements describe your own experience and are harder to argue with or feel attacked by, while 'you' statements can sound like accusations, often triggering defensiveness rather than open dialogue.",
+          "source_citation": "Gottman, J. M., & Silver, N. (1999). The Seven Principles for Making Marriage Work. Crown Publishers.",
+          "options": [
+            { "label": "'I' statements tend to reduce defensiveness compared to 'you' statements", "is_correct": true },
+            { "label": "There's no meaningful difference between the two", "is_correct": false },
+            { "label": "'You' statements are always more effective", "is_correct": false },
+            { "label": "'I' statements always end the disagreement instantly", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Is it necessary to reach full agreement for a difficult conversation to be considered successful?",
+          "explanation": "Many communication frameworks emphasize that mutual understanding — each person clearly grasping the other's perspective — is itself a valuable and often realistic outcome, even when full agreement isn't reached.",
+          "source_citation": "Stone, D., Patton, B., & Heen, S. (1999). Difficult Conversations: How to Discuss What Matters Most. Viking.",
+          "options": [
+            { "label": "No — mutual understanding alone can be a valuable, successful outcome", "is_correct": true },
+            { "label": "Yes — anything short of full agreement is a failure", "is_correct": false },
+            { "label": "Yes — otherwise the relationship is permanently damaged", "is_correct": false },
+            { "label": "No — the conversation should always be avoided instead", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Which of these is the healthiest way to close out a disagreement where both sides still see it differently?",
+          "explanation": "Explicitly naming that both perspectives are understood, even without full agreement, closes the conversation respectfully and avoids the false pressure of forcing artificial consensus.",
+          "source_citation": "Stone, D., Patton, B., & Heen, S. (1999). Difficult Conversations: How to Discuss What Matters Most. Viking.",
+          "options": [
+            { "label": "'I understand your view better now, even though we still see it differently — thanks for talking it through.'", "is_correct": true },
+            { "label": "Pretending to agree just to end the conversation", "is_correct": false },
+            { "label": "Refusing to speak to them again", "is_correct": false },
+            { "label": "Repeating your original point louder until they give in", "is_correct": false }
+          ]
+        }
+      ]
+    }
+  ]
+}

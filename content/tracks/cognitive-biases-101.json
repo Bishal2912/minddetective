@@ -1,0 +1,532 @@
+{
+  "track": {
+    "title": "Cognitive Biases 101",
+    "slug": "cognitive-biases-101",
+    "description": "Learn to spot the mental shortcuts that quietly distort your judgment — and how to catch yourself in the act.",
+    "icon": "brain",
+    "order_index": 1,
+    "is_published": true
+  },
+  "lessons": [
+    {
+      "title": "Confirmation Bias",
+      "order_index": 1,
+      "xp_reward": 10,
+      "mastery_threshold": 70,
+      "questions": [
+        {
+          "type": "mcq",
+          "prompt": "You believe a certain diet is healthy. You start noticing articles that support this and skim past ones that don't. What is this an example of?",
+          "explanation": "This is confirmation bias — the tendency to search for, interpret, and recall information in a way that confirms beliefs we already hold, while giving less attention to information that contradicts them.",
+          "source_citation": "Nickerson, R. S. (1998). Confirmation bias: A ubiquitous phenomenon in many guises. Review of General Psychology.",
+          "options": [
+            { "label": "Confirmation bias", "is_correct": true },
+            { "label": "Anchoring bias", "is_correct": false },
+            { "label": "Sunk cost fallacy", "is_correct": false },
+            { "label": "Availability heuristic", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Confirmation bias is best described as a problem with which part of thinking?",
+          "explanation": "It's a problem of selective information gathering and interpretation, not a memory defect or a logic error in itself — we actively (often unconsciously) steer ourselves toward evidence that fits what we already believe.",
+          "source_citation": "Nickerson, R. S. (1998). Confirmation bias: A ubiquitous phenomenon in many guises. Review of General Psychology.",
+          "options": [
+            { "label": "How we seek and weigh evidence", "is_correct": true },
+            { "label": "How we store long-term memories", "is_correct": false },
+            { "label": "How fast we can do arithmetic", "is_correct": false },
+            { "label": "How well we recognize faces", "is_correct": false }
+          ]
+        },
+        {
+          "type": "scenario",
+          "prompt": "A manager is convinced a new hire is a poor performer. She starts scrutinizing the hire's mistakes closely but barely notices their successes. What's happening?",
+          "explanation": "This is confirmation bias in action — once a belief ('this hire is bad') is formed, we tend to notice and weigh evidence that fits it more heavily than evidence that doesn't, reinforcing the original belief regardless of its accuracy.",
+          "source_citation": "Nickerson, R. S. (1998). Confirmation bias: A ubiquitous phenomenon in many guises. Review of General Psychology.",
+          "options": [
+            { "label": "The manager is confirming her existing belief", "is_correct": true },
+            { "label": "The manager is anchoring on a number", "is_correct": false },
+            { "label": "The manager is falling for the sunk cost fallacy", "is_correct": false },
+            { "label": "The manager is showing the availability heuristic", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Which of these is the best way to actively counter confirmation bias when researching a decision?",
+          "explanation": "Deliberately seeking out disconfirming evidence — sometimes called a 'devil's advocate' approach — is one of the few reliably effective countermeasures, because it forces attention onto information you'd otherwise skip.",
+          "source_citation": "Lord, C. G., Lepper, M. R., & Preston, E. (1984). Considering the opposite: A corrective strategy for social judgment. Journal of Personality and Social Psychology.",
+          "options": [
+            { "label": "Deliberately search for evidence that contradicts your view", "is_correct": true },
+            { "label": "Read more articles that agree with your view, to be thorough", "is_correct": false },
+            { "label": "Trust your gut instinct instead of researching", "is_correct": false },
+            { "label": "Ask only people who already agree with you", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Social media feeds that show you more of what you already engage with can strengthen confirmation bias. Why?",
+          "explanation": "Algorithmic feeds amplify confirmation bias by consistently surfacing content that matches existing engagement patterns, narrowing the range of perspectives a person is exposed to over time.",
+          "source_citation": "Nickerson, R. S. (1998). Confirmation bias: A ubiquitous phenomenon in many guises. Review of General Psychology.",
+          "options": [
+            { "label": "They repeatedly surface content that matches what you already believe", "is_correct": true },
+            { "label": "They show completely random content", "is_correct": false },
+            { "label": "They prioritize the oldest posts first", "is_correct": false },
+            { "label": "They only show content from verified accounts", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "In a debate, confirmation bias can make people rate the SAME argument as stronger or weaker depending on what?",
+          "explanation": "Research on motivated reasoning shows people judge argument quality partly based on whether the conclusion matches their prior beliefs — the same argument is rated as more convincing when it supports what someone already thinks.",
+          "source_citation": "Nickerson, R. S. (1998). Confirmation bias: A ubiquitous phenomenon in many guises. Review of General Psychology.",
+          "options": [
+            { "label": "Whether the conclusion matches their existing belief", "is_correct": true },
+            { "label": "The font the argument is printed in", "is_correct": false },
+            { "label": "How long the argument took to read", "is_correct": false },
+            { "label": "The time of day the argument was heard", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "A juror decides early in a trial that the defendant is guilty, then interprets ambiguous testimony as further proof of guilt. This is an example of confirmation bias affecting what?",
+          "explanation": "This shows confirmation bias distorting the interpretation of ambiguous evidence — the same testimony could reasonably support multiple conclusions, but it gets read through the lens of the belief already formed.",
+          "source_citation": "Nickerson, R. S. (1998). Confirmation bias: A ubiquitous phenomenon in many guises. Review of General Psychology.",
+          "options": [
+            { "label": "Interpretation of ambiguous evidence", "is_correct": true },
+            { "label": "The juror's memory of their own birthday", "is_correct": false },
+            { "label": "The courtroom's physical layout", "is_correct": false },
+            { "label": "The length of the jury deliberation", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Which statement about confirmation bias is TRUE?",
+          "explanation": "Confirmation bias affects virtually everyone, including trained experts and scientists — awareness of it reduces but doesn't eliminate it, which is exactly why structured countermeasures like seeking disconfirming evidence matter.",
+          "source_citation": "Nickerson, R. S. (1998). Confirmation bias: A ubiquitous phenomenon in many guises. Review of General Psychology.",
+          "options": [
+            { "label": "It affects nearly everyone, including experts, to some degree", "is_correct": true },
+            { "label": "It only affects people with low intelligence", "is_correct": false },
+            { "label": "It disappears completely once you learn about it", "is_correct": false },
+            { "label": "It only happens in political discussions", "is_correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Anchoring Bias",
+      "order_index": 2,
+      "xp_reward": 10,
+      "mastery_threshold": 70,
+      "questions": [
+        {
+          "type": "mcq",
+          "prompt": "A store lists a jacket's 'original price' as $200, now on sale for $90. Even if $200 was never a real selling price, shoppers often perceive $90 as a great deal. What's this an example of?",
+          "explanation": "This is anchoring bias — the first number we see (the 'anchor') skews our judgment of what follows, even when we know the anchor may be arbitrary or manipulated.",
+          "source_citation": "Tversky, A., & Kahneman, D. (1974). Judgment under uncertainty: Heuristics and biases. Science.",
+          "options": [
+            { "label": "Anchoring bias", "is_correct": true },
+            { "label": "Confirmation bias", "is_correct": false },
+            { "label": "Availability heuristic", "is_correct": false },
+            { "label": "Dunning-Kruger effect", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "In salary negotiations, why does whoever states the first number often have an advantage?",
+          "explanation": "The first number offered acts as an anchor that pulls the rest of the negotiation toward it — even skilled negotiators tend to adjust from that anchor rather than ignore it entirely.",
+          "source_citation": "Galinsky, A. D., & Mussweiler, T. (2001). First offers as anchors: The role of perspective-taking and negotiator focus. Journal of Personality and Social Psychology.",
+          "options": [
+            { "label": "It sets an anchor that pulls the rest of the negotiation toward it", "is_correct": true },
+            { "label": "It legally locks in that exact number", "is_correct": false },
+            { "label": "It's always the fairest number", "is_correct": false },
+            { "label": "It ends the negotiation immediately", "is_correct": false }
+          ]
+        },
+        {
+          "type": "scenario",
+          "prompt": "In a classic study, people were shown a spinning wheel rigged to land on either 10 or 65, then asked to estimate the percentage of African countries in the UN. Those who saw '65' guessed higher than those who saw '10' — even though the wheel was clearly random. What does this show?",
+          "explanation": "This famous experiment showed that even an obviously irrelevant, random number can act as an anchor and shift numeric estimates, demonstrating how automatic and hard to resist anchoring effects are.",
+          "source_citation": "Tversky, A., & Kahneman, D. (1974). Judgment under uncertainty: Heuristics and biases. Science.",
+          "options": [
+            { "label": "Even a random, irrelevant number can anchor our estimates", "is_correct": true },
+            { "label": "People are generally bad at spinning wheels", "is_correct": false },
+            { "label": "People always ignore irrelevant information", "is_correct": false },
+            { "label": "This demonstrates the sunk cost fallacy", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Which strategy is most supported by research for reducing anchoring effects in a negotiation?",
+          "explanation": "Coming prepared with your own independent research and a target range helps counteract an anchor, because you have a reference point that didn't originate from the other party's opening offer.",
+          "source_citation": "Galinsky, A. D., & Mussweiler, T. (2001). First offers as anchors: The role of perspective-taking and negotiator focus. Journal of Personality and Social Psychology.",
+          "options": [
+            { "label": "Research your own target range before the negotiation starts", "is_correct": true },
+            { "label": "Always accept the first offer you hear", "is_correct": false },
+            { "label": "Avoid thinking about numbers until the very end", "is_correct": false },
+            { "label": "Let the other party set every number", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "A real estate agent shows a house priced unrealistically high right before showing the one they actually want to sell you, at a 'better' price. This tactic relies on which bias?",
+          "explanation": "This is a deliberate use of anchoring — the inflated first price resets your mental reference point, making the actual target price look more reasonable by comparison.",
+          "source_citation": "Tversky, A., & Kahneman, D. (1974). Judgment under uncertainty: Heuristics and biases. Science.",
+          "options": [
+            { "label": "Anchoring bias", "is_correct": true },
+            { "label": "Sunk cost fallacy", "is_correct": false },
+            { "label": "Dunning-Kruger effect", "is_correct": false },
+            { "label": "Availability heuristic", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Does simply knowing about anchoring bias make you immune to it?",
+          "explanation": "Research consistently finds that anchoring effects persist even in people who are explicitly warned about them or are experts in the relevant field — awareness helps but doesn't fully eliminate the effect.",
+          "source_citation": "Tversky, A., & Kahneman, D. (1974). Judgment under uncertainty: Heuristics and biases. Science.",
+          "options": [
+            { "label": "No — the effect persists even when you're aware of it", "is_correct": true },
+            { "label": "Yes — awareness completely eliminates it", "is_correct": false },
+            { "label": "Yes, but only for numerical estimates", "is_correct": false },
+            { "label": "No one has studied this question", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "A restaurant menu lists a $120 bottle of wine next to a $45 one. Sales of the $45 bottle often increase. Why?",
+          "explanation": "The expensive item serves as an anchor, making the mid-priced item look like a comparatively reasonable choice — a common technique in menu and pricing design.",
+          "source_citation": "Tversky, A., & Kahneman, D. (1974). Judgment under uncertainty: Heuristics and biases. Science.",
+          "options": [
+            { "label": "The $120 bottle anchors expectations, making $45 seem reasonable", "is_correct": true },
+            { "label": "The $45 bottle is always objectively the best wine", "is_correct": false },
+            { "label": "People always choose the cheapest item on a menu", "is_correct": false },
+            { "label": "This has nothing to do with pricing psychology", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Which of the following is the clearest example of anchoring bias at play?",
+          "explanation": "Estimating a car's fair price from the sticker price is a textbook anchoring scenario — the sticker number becomes the reference point your estimate adjusts from, even if it isn't the true market value.",
+          "source_citation": "Tversky, A., & Kahneman, D. (1974). Judgment under uncertainty: Heuristics and biases. Science.",
+          "options": [
+            { "label": "Guessing a used car's fair price based on the sticker price you saw first", "is_correct": true },
+            { "label": "Remembering a car crash you saw on the news", "is_correct": false },
+            { "label": "Refusing to sell a car because you already paid for repairs", "is_correct": false },
+            { "label": "Believing you're a better driver than average", "is_correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Availability Heuristic",
+      "order_index": 3,
+      "xp_reward": 10,
+      "mastery_threshold": 70,
+      "questions": [
+        {
+          "type": "mcq",
+          "prompt": "After seeing news coverage of a plane crash, many people temporarily overestimate how dangerous flying is, compared to statistically safer activities like driving. What is this an example of?",
+          "explanation": "This is the availability heuristic — we judge the likelihood of an event by how easily examples come to mind, and vivid, widely-covered events like plane crashes are far more memorable than everyday risks like car accidents.",
+          "source_citation": "Tversky, A., & Kahneman, D. (1973). Availability: A heuristic for judging frequency and probability. Cognitive Psychology.",
+          "options": [
+            { "label": "Availability heuristic", "is_correct": true },
+            { "label": "Anchoring bias", "is_correct": false },
+            { "label": "Sunk cost fallacy", "is_correct": false },
+            { "label": "Confirmation bias", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "The availability heuristic is best described as judging probability based on what?",
+          "explanation": "The core mechanism is ease of recall — not actual statistical frequency. Anything that makes an example more memorable (vividness, recency, emotional impact) makes it feel more common, whether or not it actually is.",
+          "source_citation": "Tversky, A., & Kahneman, D. (1973). Availability: A heuristic for judging frequency and probability. Cognitive Psychology.",
+          "options": [
+            { "label": "How easily examples come to mind", "is_correct": true },
+            { "label": "Official government statistics", "is_correct": false },
+            { "label": "A careful, deliberate calculation", "is_correct": false },
+            { "label": "Peer-reviewed research only", "is_correct": false }
+          ]
+        },
+        {
+          "type": "scenario",
+          "prompt": "A person who just watched a documentary about shark attacks refuses to swim in the ocean the next day, despite shark attacks being extremely rare. What's driving this decision?",
+          "explanation": "The documentary made shark attacks highly 'available' in memory — vivid and recent — which distorts the perceived risk far above the actual statistical likelihood.",
+          "source_citation": "Tversky, A., & Kahneman, D. (1973). Availability: A heuristic for judging frequency and probability. Cognitive Psychology.",
+          "options": [
+            { "label": "The availability heuristic, from a recent vivid example", "is_correct": true },
+            { "label": "Accurate statistical reasoning", "is_correct": false },
+            { "label": "The sunk cost fallacy", "is_correct": false },
+            { "label": "The Dunning-Kruger effect", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Which of these would make an event feel MORE 'available' in memory, even if its actual frequency stays the same?",
+          "explanation": "Emotional intensity is one of the strongest drivers of availability — a single dramatic, emotionally charged event can outweigh dozens of mundane statistics in how 'common' something feels.",
+          "source_citation": "Tversky, A., & Kahneman, D. (1973). Availability: A heuristic for judging frequency and probability. Cognitive Psychology.",
+          "options": [
+            { "label": "The event being emotionally intense or dramatic", "is_correct": true },
+            { "label": "The event happening in a country you've never visited", "is_correct": false },
+            { "label": "The event being reported without any images", "is_correct": false },
+            { "label": "The event happening exactly 10 years ago", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "A hiring manager recalls one bad experience with a hire from a certain university and now assumes graduates from that school are generally unreliable. What is this?",
+          "explanation": "A single memorable case being generalized into a broader belief is a classic availability heuristic pattern — one vivid data point outweighs the (unseen) larger pool of graduates who performed fine.",
+          "source_citation": "Tversky, A., & Kahneman, D. (1973). Availability: A heuristic for judging frequency and probability. Cognitive Psychology.",
+          "options": [
+            { "label": "Availability heuristic", "is_correct": true },
+            { "label": "Anchoring bias", "is_correct": false },
+            { "label": "Sunk cost fallacy", "is_correct": false },
+            { "label": "Dunning-Kruger effect", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Which is a healthy way to counteract the availability heuristic when assessing real-world risk?",
+          "explanation": "Deliberately seeking out base-rate statistics — actual frequency data — helps correct for the distortion caused by vivid, memorable, but statistically rare examples.",
+          "source_citation": "Tversky, A., & Kahneman, D. (1973). Availability: A heuristic for judging frequency and probability. Cognitive Psychology.",
+          "options": [
+            { "label": "Look up actual base-rate statistics instead of relying on memory", "is_correct": true },
+            { "label": "Only watch more news coverage of the topic", "is_correct": false },
+            { "label": "Trust whichever example comes to mind first", "is_correct": false },
+            { "label": "Ask only people who share your existing view", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "People often think words starting with the letter 'K' are more common than words with 'K' as the third letter, even though the opposite is true. Why?",
+          "explanation": "This is a classic demonstration of the availability heuristic — it's much easier to mentally search for words by their first letter than their third, so first-letter-K words feel more 'available' and thus seem more frequent.",
+          "source_citation": "Tversky, A., & Kahneman, D. (1973). Availability: A heuristic for judging frequency and probability. Cognitive Psychology.",
+          "options": [
+            { "label": "It's easier to recall words by their first letter than a middle letter", "is_correct": true },
+            { "label": "Words with 'K' first are always shorter", "is_correct": false },
+            { "label": "This is just a coincidence with no explanation", "is_correct": false },
+            { "label": "People are anchoring on the letter K", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Which statement about the availability heuristic is most accurate?",
+          "explanation": "The availability heuristic is generally a useful mental shortcut — most of the time, things that happen often really are easier to recall. It becomes a problem specifically when recall ease and actual frequency diverge, like with rare-but-vivid events.",
+          "source_citation": "Tversky, A., & Kahneman, D. (1973). Availability: A heuristic for judging frequency and probability. Cognitive Psychology.",
+          "options": [
+            { "label": "It's a useful shortcut that fails mainly when memorable events are actually rare", "is_correct": true },
+            { "label": "It is always wrong and never useful", "is_correct": false },
+            { "label": "It only applies to financial decisions", "is_correct": false },
+            { "label": "It was disproven by later research", "is_correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Sunk Cost Fallacy",
+      "order_index": 4,
+      "xp_reward": 10,
+      "mastery_threshold": 70,
+      "questions": [
+        {
+          "type": "mcq",
+          "prompt": "Someone keeps watching a movie they're not enjoying because they've 'already invested an hour' into it. What is this an example of?",
+          "explanation": "This is the sunk cost fallacy — continuing a behavior because of resources (time, money, effort) already spent, even though those resources can't be recovered and shouldn't factor into a rational decision about what to do next.",
+          "source_citation": "Arkes, H. R., & Blumer, C. (1985). The psychology of sunk cost. Organizational Behavior and Human Decision Processes.",
+          "options": [
+            { "label": "Sunk cost fallacy", "is_correct": true },
+            { "label": "Anchoring bias", "is_correct": false },
+            { "label": "Availability heuristic", "is_correct": false },
+            { "label": "Confirmation bias", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "From a purely rational decision-making standpoint, how should past, unrecoverable costs factor into a future decision?",
+          "explanation": "Standard rational-choice theory says sunk costs are irrelevant to future decisions — only the costs and benefits going forward should matter, since past spending can't be changed no matter what you choose now.",
+          "source_citation": "Arkes, H. R., & Blumer, C. (1985). The psychology of sunk cost. Organizational Behavior and Human Decision Processes.",
+          "options": [
+            { "label": "They shouldn't factor in at all — only future costs/benefits matter", "is_correct": true },
+            { "label": "They should be the main deciding factor", "is_correct": false },
+            { "label": "They should be doubled in importance", "is_correct": false },
+            { "label": "They should only matter for money, not time", "is_correct": false }
+          ]
+        },
+        {
+          "type": "scenario",
+          "prompt": "A company has spent $2 million on a failing project. Executives argue 'we can't stop now, we've already put in $2 million' and approve more funding. What's happening here?",
+          "explanation": "This is a classic organizational example of the sunk cost fallacy — the decision to continue is being driven by past spending rather than an honest assessment of whether future investment is worthwhile.",
+          "source_citation": "Arkes, H. R., & Blumer, C. (1985). The psychology of sunk cost. Organizational Behavior and Human Decision Processes.",
+          "options": [
+            { "label": "The sunk cost fallacy is driving the decision", "is_correct": true },
+            { "label": "This is a purely rational business decision", "is_correct": false },
+            { "label": "This is an example of anchoring bias", "is_correct": false },
+            { "label": "This is an example of the availability heuristic", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Which question best helps someone check whether they're falling for the sunk cost fallacy?",
+          "explanation": "Reframing the decision as a fresh choice — ignoring what's already been spent — strips out the sunk cost and forces a decision based only on future value, which is the rational way to evaluate it.",
+          "source_citation": "Arkes, H. R., & Blumer, C. (1985). The psychology of sunk cost. Organizational Behavior and Human Decision Processes.",
+          "options": [
+            { "label": "'If I were starting fresh today, knowing what I know now, would I choose this?'", "is_correct": true },
+            { "label": "'How much have I already spent on this?'", "is_correct": false },
+            { "label": "'How would I feel if I quit right now?'", "is_correct": false },
+            { "label": "'What would my friends think if I quit?'", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "A person stays in a relationship they're unhappy in, thinking 'I've already put five years into this.' What bias does this reasoning reflect?",
+          "explanation": "Time already invested in a relationship is a sunk cost — it can't be recovered regardless of what happens next, so basing the decision on it (rather than on current and future wellbeing) is a textbook sunk cost fallacy.",
+          "source_citation": "Arkes, H. R., & Blumer, C. (1985). The psychology of sunk cost. Organizational Behavior and Human Decision Processes.",
+          "options": [
+            { "label": "Sunk cost fallacy", "is_correct": true },
+            { "label": "Dunning-Kruger effect", "is_correct": false },
+            { "label": "Availability heuristic", "is_correct": false },
+            { "label": "Anchoring bias", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Which of these is NOT an example of the sunk cost fallacy?",
+          "explanation": "Deciding based on a genuine cost-benefit forecast — not on what's already been spent — is exactly the rational approach the sunk cost fallacy fails to follow. The other options all involve continuing something purely because of past investment.",
+          "source_citation": "Arkes, H. R., & Blumer, C. (1985). The psychology of sunk cost. Organizational Behavior and Human Decision Processes.",
+          "options": [
+            { "label": "Cancelling a gym membership after honestly comparing its future cost and benefit", "is_correct": true },
+            { "label": "Finishing a bad meal because you already paid for it", "is_correct": false },
+            { "label": "Continuing a failing project because of money already spent", "is_correct": false },
+            { "label": "Staying in a job you dislike because of years already spent there", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Studies have found that even pigeons and rodents show sunk-cost-like behavior in experiments. What does this suggest?",
+          "explanation": "Some research suggests sunk cost effects may have roots in more basic, even non-human, decision processes tied to persistence and effort — although the human version is also heavily shaped by social and psychological factors like avoiding regret.",
+          "source_citation": "Arkes, H. R., & Blumer, C. (1985). The psychology of sunk cost. Organizational Behavior and Human Decision Processes.",
+          "options": [
+            { "label": "The tendency may have roots in basic, evolved decision processes", "is_correct": true },
+            { "label": "Animals are immune to all cognitive biases", "is_correct": false },
+            { "label": "The sunk cost fallacy is purely a human invention with no biological basis", "is_correct": false },
+            { "label": "This finding has been fully disproven", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Why might admitting a sunk cost was 'wasted' feel emotionally difficult, even when logically the right move is to stop?",
+          "explanation": "Loss aversion and a desire to avoid feeling regret over the wasted investment can make continuing feel emotionally easier than stopping, even though stopping is often the more rational choice going forward.",
+          "source_citation": "Arkes, H. R., & Blumer, C. (1985). The psychology of sunk cost. Organizational Behavior and Human Decision Processes.",
+          "options": [
+            { "label": "It can feel like admitting the past investment was a mistake or a loss", "is_correct": true },
+            { "label": "It has no emotional component at all", "is_correct": false },
+            { "label": "It always feels easier than continuing", "is_correct": false },
+            { "label": "It's a purely financial, not psychological, issue", "is_correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Dunning-Kruger Effect",
+      "order_index": 5,
+      "xp_reward": 10,
+      "mastery_threshold": 70,
+      "questions": [
+        {
+          "type": "mcq",
+          "prompt": "A person who just took one online course confidently claims to be an expert, while a genuine expert in the same field is more cautious about overstating their knowledge. What is this pattern called?",
+          "explanation": "This is the Dunning-Kruger effect — people with limited knowledge or skill in an area often overestimate their own competence, partly because the same skills needed to perform well are also needed to accurately judge one's own performance.",
+          "source_citation": "Kruger, J., & Dunning, D. (1999). Unskilled and unaware of it: How difficulties in recognizing one's own incompetence lead to inflated self-assessments. Journal of Personality and Social Psychology.",
+          "options": [
+            { "label": "Dunning-Kruger effect", "is_correct": true },
+            { "label": "Anchoring bias", "is_correct": false },
+            { "label": "Sunk cost fallacy", "is_correct": false },
+            { "label": "Availability heuristic", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "According to the original research, why do low-skill individuals tend to overestimate their competence?",
+          "explanation": "The original study proposed that the same skills required to perform a task well are also required to accurately evaluate performance on that task — so a lack of skill also impairs the ability to recognize that lack of skill.",
+          "source_citation": "Kruger, J., & Dunning, D. (1999). Unskilled and unaware of it: How difficulties in recognizing one's own incompetence lead to inflated self-assessments. Journal of Personality and Social Psychology.",
+          "options": [
+            { "label": "The skills needed to do well are the same skills needed to judge performance accurately", "is_correct": true },
+            { "label": "They are naturally more honest than experts", "is_correct": false },
+            { "label": "They have been explicitly told they are experts", "is_correct": false },
+            { "label": "They spend more time studying than experts", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "What tends to happen to genuine experts' confidence as their actual competence increases, according to this research?",
+          "explanation": "The original study found that highly skilled individuals sometimes slightly underestimate their relative standing, partly because they assume tasks that are easy for them are also easy for others.",
+          "source_citation": "Kruger, J., & Dunning, D. (1999). Unskilled and unaware of it: How difficulties in recognizing one's own incompetence lead to inflated self-assessments. Journal of Personality and Social Psychology.",
+          "options": [
+            { "label": "They sometimes slightly underestimate their own relative skill", "is_correct": true },
+            { "label": "Their confidence always becomes wildly inflated", "is_correct": false },
+            { "label": "They stop being able to judge their skill at all", "is_correct": false },
+            { "label": "Their confidence has no relationship to their skill", "is_correct": false }
+          ]
+        },
+        {
+          "type": "scenario",
+          "prompt": "A new employee with two weeks of experience confidently tells a 15-year veteran how to do their job. The veteran, despite being far more skilled, hesitates before offering an opinion. What best explains this contrast?",
+          "explanation": "This mirrors the classic Dunning-Kruger pattern — limited experience can produce inflated confidence, while deep expertise often comes with a clearer, more humble sense of a field's genuine complexity and one's own limitations within it.",
+          "source_citation": "Kruger, J., & Dunning, D. (1999). Unskilled and unaware of it: How difficulties in recognizing one's own incompetence lead to inflated self-assessments. Journal of Personality and Social Psychology.",
+          "options": [
+            { "label": "The Dunning-Kruger effect", "is_correct": true },
+            { "label": "The sunk cost fallacy", "is_correct": false },
+            { "label": "The availability heuristic", "is_correct": false },
+            { "label": "Confirmation bias", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Which of these is the best way to reduce Dunning-Kruger-style overconfidence in yourself?",
+          "explanation": "Seeking honest, specific feedback from people more skilled than you directly targets the core problem — a lack of accurate information about your own performance — rather than relying on internal self-assessment alone.",
+          "source_citation": "Kruger, J., & Dunning, D. (1999). Unskilled and unaware of it: How difficulties in recognizing one's own incompetence lead to inflated self-assessments. Journal of Personality and Social Psychology.",
+          "options": [
+            { "label": "Actively seek specific, honest feedback from more skilled others", "is_correct": true },
+            { "label": "Avoid feedback so your confidence stays high", "is_correct": false },
+            { "label": "Only compare yourself to total beginners", "is_correct": false },
+            { "label": "Trust your self-assessment completely", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Is the Dunning-Kruger effect the same thing as simply 'being stupid'?",
+          "explanation": "The effect is specifically about the gap between skill and self-assessed skill within a specific domain — it can happen to anyone in an area where they have limited experience, regardless of their general intelligence.",
+          "source_citation": "Kruger, J., & Dunning, D. (1999). Unskilled and unaware of it: How difficulties in recognizing one's own incompetence lead to inflated self-assessments. Journal of Personality and Social Psychology.",
+          "options": [
+            { "label": "No — it's about a skill/self-assessment gap in a specific domain, not general intelligence", "is_correct": true },
+            { "label": "Yes — only people with low IQ experience it", "is_correct": false },
+            { "label": "Yes — it's identical to low intelligence in all contexts", "is_correct": false },
+            { "label": "No — it only applies to people over age 60", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "A common early stage in learning a new skill is a temporary spike in confidence right after gaining just a little bit of knowledge. What is this pattern often called?",
+          "explanation": "This pattern is often referred to as the 'peak of Mount Stupid' colloquially — a burst of confidence after minimal exposure, before deeper learning reveals the true complexity of a subject and confidence dips again.",
+          "source_citation": "Kruger, J., & Dunning, D. (1999). Unskilled and unaware of it: How difficulties in recognizing one's own incompetence lead to inflated self-assessments. Journal of Personality and Social Psychology.",
+          "options": [
+            { "label": "An early confidence spike, before deeper learning reveals complexity", "is_correct": true },
+            { "label": "The final stage of mastering any skill", "is_correct": false },
+            { "label": "A permanent state that never changes", "is_correct": false },
+            { "label": "A sign of guaranteed future expertise", "is_correct": false }
+          ]
+        },
+        {
+          "type": "mcq",
+          "prompt": "Why is it important to distinguish the Dunning-Kruger effect from simply being new at something?",
+          "explanation": "Being a beginner is not itself a flaw — the issue the effect describes is specifically the mismatch between low skill and high self-assessed confidence, not lack of experience alone. A humble beginner who knows they're a beginner isn't experiencing the effect.",
+          "source_citation": "Kruger, J., & Dunning, D. (1999). Unskilled and unaware of it: How difficulties in recognizing one's own incompetence lead to inflated self-assessments. Journal of Personality and Social Psychology.",
+          "options": [
+            { "label": "The effect is about overconfidence relative to skill, not about being new", "is_correct": true },
+            { "label": "There is no meaningful distinction", "is_correct": false },
+            { "label": "Being new automatically means you have the effect", "is_correct": false },
+            { "label": "The effect only applies to experienced people", "is_correct": false }
+          ]
+        }
+      ]
+    }
+  ]
+}
