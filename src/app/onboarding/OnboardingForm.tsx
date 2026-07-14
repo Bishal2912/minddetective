@@ -47,7 +47,7 @@ export function OnboardingForm() {
         body: JSON.stringify({ interests: selected }),
       });
 
-      const result = await response.json();
+      const result = (await response.json()) as { error?: { message?: string } };
 
       if (!response.ok) {
         setError(result.error?.message ?? 'Something went wrong. Please try again.');
