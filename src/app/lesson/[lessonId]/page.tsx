@@ -1,7 +1,7 @@
 'use client';
 
 import { use, useState } from 'react';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useQuery, useMutation } from '@tanstack/react-query';
 
 import Card from '@/components/ui/Card';
@@ -54,6 +54,7 @@ async function submitLesson(
 
 export default function LessonPage({ params }: { params: Promise<{ lessonId: string }> }) {
   const { lessonId } = use(params);
+  const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, number>>({});
 
@@ -71,6 +72,25 @@ export default function LessonPage({ params }: { params: Promise<{ lessonId: str
           selectedOptionId,
         })),
       ),
+    onSuccess: (result) => {
+      const correctCount = result.correctAnswers.filter(
+        (c) => c.correctOptionId === answers[c.questionId],
+      ).length;
+
+      sessionStorage.setItem(
+        `lesson-result-${lessonId}`,
+        JSON.stringify({
+          ...result,
+          questions: data?.questions.map((q) => ({ id: q.id, prompt: q.prompt })) ?? [],
+          answers,
+          trackId: data?.lesson.track_id,
+          totalQuestions: data?.questions.length ?? 0,
+          correctCount,
+        }),
+      );
+
+      router.push(`/lesson/${lessonId}/results`);
+    },
   });
 
   if (isLoading) {
@@ -85,41 +105,6 @@ export default function LessonPage({ params }: { params: Promise<{ lessonId: str
     return (
       <main className="max-w-2xl mx-auto p-6">
         <p className="text-red-600">{(error as Error).message}</p>
-      </main>
-    );
-  }
-
-  if (mutation.isSuccess) {
-    const result = mutation.data;
-    return (
-      <main className="max-w-2xl mx-auto p-6 space-y-6">
-        <h1 className="text-2xl font-bold">Lesson Complete 🎉</h1>
-        <Card>
-          <p>Score: {result.score}%</p>
-          <p>XP earned: +{result.xpEarned}</p>
-          <p>New total XP: {result.newTotalXp}</p>
-          <p>Mastered: {result.mastered ? 'Yes ✅' : 'Not yet — try again'}</p>
-          {result.leveledUp && <p className="text-blue-600 font-semibold">Level up! 🎊</p>}
-        </Card>
-        <div className="space-y-3">
-          {data?.questions.map((q) => {
-            const info = result.correctAnswers.find((c) => c.questionId === q.id);
-            const selected = answers[q.id];
-            const wasCorrect = info?.correctOptionId === selected;
-            return (
-              <Card key={q.id}>
-                <p className="font-medium">{q.prompt}</p>
-                <p className={wasCorrect ? 'text-green-600' : 'text-red-600'}>
-                  {wasCorrect ? '✓ Correct' : '✗ Incorrect'}
-                </p>
-                <p className="text-sm text-gray-500 mt-1">{info?.explanation}</p>
-              </Card>
-            );
-          })}
-        </div>
-        <Link href={`/tracks/${data?.lesson.track_id}`} className="text-blue-600 hover:underline">
-          ← Back to Track
-        </Link>
       </main>
     );
   }
