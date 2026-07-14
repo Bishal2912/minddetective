@@ -4,6 +4,7 @@ import { getCurrentSession } from '@/lib/auth';
 import { getDb } from '@/lib/db';
 import { lessonCompleteSchema } from '@/lib/validation/lesson.schema';
 import { calculateLevel, calculateScore, isMastered } from '@/lib/xp-engine';
+import { calculateStreakUpdate } from '@/lib/streak-engine';
 
 export async function POST(
   request: NextRequest,
@@ -75,14 +76,21 @@ export async function POST(
   const xpEarned = lesson.xp_reward;
 
   const stats = await db
-    .prepare('SELECT xp FROM user_stats WHERE user_id = ? LIMIT 1')
+    .prepare('SELECT xp, streak_count, longest_streak, last_active_date FROM user_stats WHERE user_id = ? LIMIT 1')
     .bind(session.userId)
-    .first<{ xp: number }>();
+    .first<{ xp: number; streak_count: number; longest_streak: number; last_active_date: string | null }>();
 
   const currentXp = stats?.xp ?? 0;
   const newTotalXp = currentXp + xpEarned;
   const leveledUp = calculateLevel(newTotalXp) > calculateLevel(currentXp);
   const now = new Date().toISOString();
+  const today = now.split('T')[0];
+
+  const { newStreak, newLongestStreak } = calculateStreakUpdate(
+    stats?.last_active_date ?? null,
+    stats?.streak_count ?? 0,
+    stats?.longest_streak ?? 0,
+  );
 
   const statements = [
     db
@@ -91,8 +99,10 @@ export async function POST(
       )
       .bind(session.userId, lessonId, now, score, mastered ? 1 : 0),
     db
-      .prepare('UPDATE user_stats SET xp = ?, updated_at = ? WHERE user_id = ?')
-      .bind(newTotalXp, now, session.userId),
+      .prepare(
+        'UPDATE user_stats SET xp = ?, streak_count = ?, longest_streak = ?, last_active_date = ?, updated_at = ? WHERE user_id = ?',
+      )
+      .bind(newTotalXp, newStreak, newLongestStreak, today, now, session.userId),
     ...graded.map((g) =>
       db
         .prepare(
