@@ -75,14 +75,16 @@ export default function TrackDetailPage({ params }: { params: Promise<{ trackId:
 
       <div className="grid gap-3">
         {data?.lessons.map((lesson, index) => (
-          <Card key={lesson.id} className="flex items-center justify-between">
-            <div>
-              <p className="text-sm text-gray-400">Lesson {index + 1}</p>
-              <h2 className="font-semibold">{lesson.title}</h2>
-            </div>
-            <span className="text-sm text-blue-600 font-medium">+{lesson.xp_reward} XP</span>
-          </Card>
-        ))}
+          <Link key={lesson.id} href={`/lesson/${lesson.id}`}>
+          <Card className="flex items-center justify-between hover:border-blue-400 transition cursor-pointer">
+      <div>
+        <p className="text-sm text-gray-400">Lesson {index + 1}</p>
+        <h2 className="font-semibold">{lesson.title}</h2>
+      </div>
+      <span className="text-sm text-blue-600 font-medium">+{lesson.xp_reward} XP</span>
+    </Card>
+  </Link>
+))}
       </div>
     </main>
   );
