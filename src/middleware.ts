@@ -7,7 +7,7 @@ const loggedOutOnlyPaths = ['/login', '/signup'];
  * Protects page routes by checking for the presence of a session cookie.
  * The full session validation happens later in page/API route handlers.
  */
-export function proxy(request: NextRequest) {
+export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const hasSessionCookie = request.cookies.has('session_id');
 
@@ -28,5 +28,6 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
+  runtime: 'experimental-edge',
   matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
 };
