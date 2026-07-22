@@ -59,9 +59,9 @@ async function submitDailyChallenge(questionId: number, selectedOptionId: number
 export default function DashboardPage() {
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
 
-  const { data: me, isLoading: meLoading } = useQuery({ queryKey: ['me'], queryFn: fetchMe });
-  const { data: tracks, isLoading: tracksLoading } = useQuery({ queryKey: ['tracks'], queryFn: fetchTracks });
-  const { data: daily, isLoading: dailyLoading } = useQuery({
+  const { data: me, isLoading: meLoading, isError: meIsError } = useQuery({ queryKey: ['me'], queryFn: fetchMe });
+  const { data: tracks, isLoading: tracksLoading, isError: tracksIsError } = useQuery({ queryKey: ['tracks'], queryFn: fetchTracks });
+  const { data: daily, isLoading: dailyLoading, isError: dailyIsError } = useQuery({
     queryKey: ['daily-challenge'],
     queryFn: fetchDailyChallenge,
   });
@@ -78,20 +78,37 @@ export default function DashboardPage() {
           <span>⭐ XP: {me.xp}</span>
         </div>
       )}
+      {meIsError && (
+        <p className="text-sm text-red-600 dark:text-red-400">Couldn&apos;t load your stats. Try refreshing the page.</p>
+      )}
 
       <div>
         <h2 className="text-lg font-semibold mb-3">Today&apos;s Daily Challenge</h2>
-        {dailyLoading && <p className="text-gray-500">Loading...</p>}
+        {dailyLoading && <p className="text-gray-500 dark:text-gray-400">Loading...</p>}
+        {dailyIsError && (
+          <p className="text-sm text-red-600 dark:text-red-400">Couldn&apos;t load today&apos;s challenge. Try refreshing the page.</p>
+        )}
         {daily && !mutation.isSuccess && (
           <Card>
             <p className="font-medium mb-4">{daily.question.prompt}</p>
-            <div className="space-y-2">
+            <div className="space-y-2" role="radiogroup" aria-label="Answer options">
               {daily.options.map((option) => (
                 <div
                   key={option.id}
+                  role="radio"
+                  aria-checked={selectedOption === option.id}
+                  tabIndex={0}
                   onClick={() => setSelectedOption(option.id)}
-                  className={`p-3 rounded-lg border-2 cursor-pointer ${
-                    selectedOption === option.id ? 'border-blue-500 bg-blue-50' : 'border-gray-200'
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      setSelectedOption(option.id);
+                    }
+                  }}
+                  className={`p-3 rounded-lg border-2 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${
+                    selectedOption === option.id
+                      ? 'border-blue-500 bg-blue-50 dark:bg-blue-950'
+                      : 'border-gray-200 dark:border-gray-700'
                   }`}
                 >
                   {option.label}
@@ -109,24 +126,27 @@ export default function DashboardPage() {
         )}
         {mutation.isSuccess && (
           <Card>
-            <p className={mutation.data.isCorrect ? 'text-green-600 font-semibold' : 'text-red-600 font-semibold'}>
+            <p className={mutation.data.isCorrect ? 'text-green-600 dark:text-green-400 font-semibold' : 'text-red-600 dark:text-red-400 font-semibold'}>
               {mutation.data.isCorrect ? '✓ Correct!' : '✗ Not quite'}
             </p>
-            <p className="text-sm text-gray-500 mt-1">{mutation.data.explanation}</p>
-            <p className="text-sm text-gray-400 mt-2">✓ Completed today — come back tomorrow.</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{mutation.data.explanation}</p>
+            <p className="text-sm text-gray-400 dark:text-gray-500 mt-2">✓ Completed today — come back tomorrow.</p>
           </Card>
         )}
       </div>
 
       <div>
         <h2 className="text-lg font-semibold mb-3">Your Tracks</h2>
-        {tracksLoading && <p className="text-gray-500">Loading...</p>}
+        {tracksLoading && <p className="text-gray-500 dark:text-gray-400">Loading...</p>}
+        {tracksIsError && (
+          <p className="text-sm text-red-600 dark:text-red-400">Couldn&apos;t load your tracks. Try refreshing the page.</p>
+        )}
         <div className="grid gap-3">
           {tracks?.map((track) => (
             <Link key={track.id} href={`/tracks/${track.id}`}>
-              <Card className="hover:border-blue-400 transition cursor-pointer">
+              <Card className="hover:border-blue-400 dark:hover:border-blue-500 transition cursor-pointer">
                 <h3 className="font-semibold">{track.title}</h3>
-                {track.description && <p className="text-sm text-gray-500 mt-1">{track.description}</p>}
+                {track.description && <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{track.description}</p>}
               </Card>
             </Link>
           ))}

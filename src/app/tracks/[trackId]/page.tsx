@@ -47,7 +47,7 @@ export default function TrackDetailPage({ params }: { params: Promise<{ trackId:
   if (isLoading) {
     return (
       <main className="max-w-3xl mx-auto p-6">
-        <p className="text-gray-500">Loading...</p>
+        <p className="text-gray-500 dark:text-gray-400">Loading...</p>
       </main>
     );
   }
@@ -55,33 +55,33 @@ export default function TrackDetailPage({ params }: { params: Promise<{ trackId:
   if (isError) {
     return (
       <main className="max-w-3xl mx-auto p-6">
-        <p className="text-red-600">{(error as Error).message}</p>
+        <p className="text-red-600 dark:text-red-400">{(error as Error).message}</p>
       </main>
     );
   }
 
   return (
     <main className="max-w-3xl mx-auto p-6 space-y-6">
-      <Link href="/tracks" className="text-sm text-blue-600 hover:underline">
+      <Link href="/tracks" className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
         ← Back to Tracks
       </Link>
 
       <div>
         <h1 className="text-2xl font-bold">{data?.track.title}</h1>
         {data?.track.description && (
-          <p className="text-gray-500 mt-1">{data.track.description}</p>
+          <p className="text-gray-500 dark:text-gray-400 mt-1">{data.track.description}</p>
         )}
       </div>
 
       <div className="grid gap-3">
         {data?.lessons.map((lesson, index) => (
           <Link key={lesson.id} href={`/lesson/${lesson.id}`}>
-          <Card className="flex items-center justify-between hover:border-blue-400 transition cursor-pointer">
+          <Card className="flex items-center justify-between hover:border-blue-400 dark:hover:border-blue-500 transition cursor-pointer">
       <div>
-        <p className="text-sm text-gray-400">Lesson {index + 1}</p>
+        <p className="text-sm text-gray-400 dark:text-gray-500">Lesson {index + 1}</p>
         <h2 className="font-semibold">{lesson.title}</h2>
       </div>
-      <span className="text-sm text-blue-600 font-medium">+{lesson.xp_reward} XP</span>
+      <span className="text-sm text-blue-600 dark:text-blue-400 font-medium">+{lesson.xp_reward} XP</span>
     </Card>
   </Link>
 ))}

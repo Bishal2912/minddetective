@@ -34,7 +34,7 @@ export default function TracksPage() {
   if (isLoading) {
     return (
       <main className="max-w-3xl mx-auto p-6">
-        <p className="text-gray-500">Loading tracks...</p>
+        <p className="text-gray-500 dark:text-gray-400">Loading tracks...</p>
       </main>
     );
   }
@@ -42,7 +42,7 @@ export default function TracksPage() {
   if (isError) {
     return (
       <main className="max-w-3xl mx-auto p-6">
-        <p className="text-red-600">{(error as Error).message}</p>
+        <p className="text-red-600 dark:text-red-400">{(error as Error).message}</p>
       </main>
     );
   }
@@ -53,10 +53,10 @@ export default function TracksPage() {
       <div className="grid gap-4">
         {tracks?.map((track) => (
           <Link key={track.id} href={`/tracks/${track.id}`}>
-            <Card className="hover:border-blue-400 transition cursor-pointer">
+            <Card className="hover:border-blue-400 dark:hover:border-blue-500 transition cursor-pointer">
               <h2 className="font-semibold text-lg">{track.title}</h2>
               {track.description && (
-                <p className="text-sm text-gray-500 mt-1">{track.description}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{track.description}</p>
               )}
             </Card>
           </Link>

@@ -24,8 +24,8 @@ async function fetchProgress(): Promise<TrackProgress[]> {
 }
 
 export default function ProfilePage() {
-  const { data: me, isLoading: meLoading } = useQuery({ queryKey: ['me'], queryFn: fetchMe });
-  const { data: progress, isLoading: progressLoading } = useQuery({
+  const { data: me, isLoading: meLoading, isError: meIsError } = useQuery({ queryKey: ['me'], queryFn: fetchMe });
+  const { data: progress, isLoading: progressLoading, isError: progressIsError } = useQuery({
     queryKey: ['progress'],
     queryFn: fetchProgress,
   });
@@ -33,7 +33,15 @@ export default function ProfilePage() {
   if (meLoading) {
     return (
       <main className="max-w-2xl mx-auto p-6">
-        <p className="text-gray-500">Loading profile...</p>
+        <p className="text-gray-500 dark:text-gray-400">Loading profile...</p>
+      </main>
+    );
+  }
+
+  if (meIsError) {
+    return (
+      <main className="max-w-2xl mx-auto p-6">
+        <p className="text-sm text-red-600 dark:text-red-400">Couldn&apos;t load your profile. Try refreshing the page.</p>
       </main>
     );
   }
@@ -49,11 +57,11 @@ export default function ProfilePage() {
         </div>
         <div>
           <h1 className="text-xl font-bold">{me?.name}</h1>
-          <p className="text-gray-500">Level {level}</p>
+          <p className="text-gray-500 dark:text-gray-400">Level {level}</p>
         </div>
       </div>
 
-      <div className="flex gap-6">
+      <div className="flex flex-wrap gap-x-6 gap-y-2">
         <span>🔥 {me?.streak_count} day streak</span>
         <span>⭐ {me?.xp} XP total</span>
         <span>🏆 Longest streak: {me?.longest_streak} days</span>
@@ -61,7 +69,10 @@ export default function ProfilePage() {
 
       <div>
         <h2 className="text-lg font-semibold mb-3">Tracks in Progress</h2>
-        {progressLoading && <p className="text-gray-500">Loading...</p>}
+        {progressLoading && <p className="text-gray-500 dark:text-gray-400">Loading...</p>}
+        {progressIsError && (
+          <p className="text-sm text-red-600 dark:text-red-400">Couldn&apos;t load your progress. Try refreshing the page.</p>
+        )}
         <div className="space-y-3">
           {progress?.map((track) => {
             const percent =
@@ -72,11 +83,11 @@ export default function ProfilePage() {
               <Card key={track.track_id}>
                 <div className="flex justify-between mb-1">
                   <span className="font-medium">{track.track_title}</span>
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-gray-500 dark:text-gray-400">
                     {track.completed_lessons}/{track.total_lessons} lessons
                   </span>
                 </div>
-                <div className="w-full bg-gray-200 rounded-full h-2">
+                <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                   <div
                     className="bg-blue-500 h-2 rounded-full transition-all"
                     style={{ width: `${percent}%` }}
@@ -91,11 +102,11 @@ export default function ProfilePage() {
       <div>
         <h2 className="text-lg font-semibold mb-3">Badges</h2>
         <Card>
-          <p className="text-gray-400 text-sm">Badges coming soon 🏅</p>
+          <p className="text-gray-400 dark:text-gray-500 text-sm">Badges coming soon 🏅</p>
         </Card>
       </div>
 
-      <Link href="/settings" className="text-blue-600 hover:underline">
+      <Link href="/settings" className="text-blue-600 dark:text-blue-400 hover:underline">
         Edit Profile →
       </Link>
     </main>

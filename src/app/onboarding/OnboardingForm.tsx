@@ -66,7 +66,7 @@ export function OnboardingForm() {
     <div className="w-full max-w-xl space-y-6">
       <div className="text-center space-y-2">
         <h1 className="text-2xl font-bold">What are you most interested in?</h1>
-        <p className="text-gray-500">Pick one or more — we&apos;ll recommend a track to start with.</p>
+        <p className="text-gray-500 dark:text-gray-400">Pick one or more — we&apos;ll recommend a track to start with.</p>
       </div>
 
       <div className="grid gap-4">
@@ -77,18 +77,27 @@ export function OnboardingForm() {
           return (
             <Card
               key={track.slug}
+              role="checkbox"
+              aria-checked={isSelected}
+              tabIndex={0}
               onClick={() => toggleTrack(track.slug)}
-              className={`cursor-pointer transition border-2 ${
-                isSelected ? 'border-blue-500 bg-blue-50' : 'border-transparent'
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  toggleTrack(track.slug);
+                }
+              }}
+              className={`cursor-pointer transition border-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${
+                isSelected ? 'border-blue-500 bg-blue-50 dark:bg-blue-950' : 'border-transparent'
               }`}
             >
               <div className="flex items-center justify-between">
                 <div>
                   <h2 className="font-semibold">{track.title}</h2>
-                  <p className="text-sm text-gray-500">{track.description}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">{track.description}</p>
                 </div>
                 {isRecommended && (
-                  <span className="text-xs font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded-full">
+                  <span className="text-xs font-medium text-blue-600 dark:text-blue-300 bg-blue-100 dark:bg-blue-900 px-2 py-1 rounded-full">
                     Recommended
                   </span>
                 )}
@@ -98,7 +107,7 @@ export function OnboardingForm() {
         })}
       </div>
 
-      {error && <p className="text-sm text-red-600 text-center">{error}</p>}
+      {error && <p className="text-sm text-red-600 dark:text-red-400 text-center">{error}</p>}
 
       <Button onClick={handleContinue} disabled={isSubmitting} className="w-full">
         {isSubmitting ? 'Saving...' : 'Continue'}

@@ -12,22 +12,24 @@ type Lesson = { id: number; track_id: number; title: string; xp_reward: number; 
 
 async function fetchTracks(): Promise<Track[]> {
   const response = await fetch('/api/v1/admin/tracks');
-  const result = (await response.json()) as { data?: { tracks: Track[] } };
+  const result = (await response.json()) as { data?: { tracks: Track[] }; error?: { message?: string } };
+  if (!response.ok) throw new Error(result.error?.message ?? 'Failed to load tracks');
   return result.data?.tracks ?? [];
 }
 
 async function fetchLessonsForTrack(trackId: number): Promise<Lesson[]> {
   const response = await fetch(`/api/v1/tracks/${trackId}`);
-  const result = (await response.json()) as { data?: { lessons: Lesson[] } };
+  const result = (await response.json()) as { data?: { lessons: Lesson[] }; error?: { message?: string } };
+  if (!response.ok) throw new Error(result.error?.message ?? 'Failed to load lessons');
   return result.data?.lessons ?? [];
 }
 
 export default function AdminLessonsPage() {
   const queryClient = useQueryClient();
-  const { data: tracks } = useQuery({ queryKey: ['admin-tracks'], queryFn: fetchTracks });
+  const { data: tracks, isError: tracksIsError } = useQuery({ queryKey: ['admin-tracks'], queryFn: fetchTracks });
   const [selectedTrackId, setSelectedTrackId] = useState<number | null>(null);
 
-  const { data: lessons } = useQuery({
+  const { data: lessons, isError: lessonsIsError } = useQuery({
     queryKey: ['admin-lessons', selectedTrackId],
     queryFn: () => fetchLessonsForTrack(selectedTrackId!),
     enabled: selectedTrackId !== null,
@@ -70,10 +72,18 @@ export default function AdminLessonsPage() {
     <div className="space-y-6">
       <h1 className="text-xl font-bold">Lessons</h1>
 
+      {tracksIsError && (
+        <p className="text-sm text-red-600 dark:text-red-400">Failed to load tracks. Try refreshing the page.</p>
+      )}
+      {lessonsIsError && (
+        <p className="text-sm text-red-600 dark:text-red-400">Failed to load lessons. Try refreshing the page.</p>
+      )}
+
       <div>
-        <label className="text-sm text-gray-500">Select a track</label>
+        <label htmlFor="track-select" className="text-sm text-gray-500 dark:text-gray-400">Select a track</label>
         <select
-          className="block w-full border rounded-lg p-2 mt-1"
+          id="track-select"
+          className="block w-full border rounded-lg p-2 mt-1 bg-white dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100"
           value={selectedTrackId ?? ''}
           onChange={(e) => setSelectedTrackId(Number(e.target.value))}
         >
@@ -93,14 +103,16 @@ export default function AdminLessonsPage() {
           <Card>
             <h2 className="font-semibold mb-3">Add New Lesson</h2>
             <div className="space-y-2">
-              <Input placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />
+              <Input aria-label="Title" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />
               <Input
+                aria-label="XP Reward"
                 placeholder="XP Reward"
                 type="number"
                 value={xpReward}
                 onChange={(e) => setXpReward(e.target.value)}
               />
               <Input
+                aria-label="Mastery Threshold (%)"
                 placeholder="Mastery Threshold (%)"
                 type="number"
                 value={masteryThreshold}
@@ -117,15 +129,15 @@ export default function AdminLessonsPage() {
               <Card key={lesson.id} className="flex items-center justify-between">
                 <div>
                   <p className="font-medium">
-                    {lesson.title} <span className="text-xs text-gray-400">#{lesson.id}</span>
+                    {lesson.title} <span className="text-xs text-gray-400 dark:text-gray-500">#{lesson.id}</span>
                   </p>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
                     +{lesson.xp_reward} XP · {lesson.mastery_threshold}% mastery
                   </p>
                 </div>
                 <Button
                   onClick={() => deleteMutation.mutate(lesson.id)}
-                  className="bg-red-100 text-red-700 hover:bg-red-200 text-sm px-3 py-1"
+                  className="bg-red-100 text-red-700 hover:bg-red-200 dark:bg-red-950 dark:text-red-300 dark:hover:bg-red-900 text-sm px-3 py-1"
                 >
                   Delete
                 </Button>

@@ -10,8 +10,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
   useEffect(() => {
     fetch('/api/v1/user/me')
-      .then((res) => res.json())
-      .then((result: { data?: { id: string } }) => {
+      .then((res) => res.json() as Promise<{ data?: { id: string } }>)
+      .then((result) => {
         if (!result.data) {
           router.replace('/dashboard');
           return;
@@ -29,21 +29,21 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   if (!checked) {
     return (
       <div className="max-w-4xl mx-auto p-6">
-        <p className="text-gray-500">Checking permissions...</p>
+        <p className="text-gray-500 dark:text-gray-400">Checking permissions...</p>
       </div>
     );
   }
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <nav className="flex gap-4 mb-6 border-b pb-3 text-sm font-medium">
-        <Link href="/admin/tracks" className="text-blue-600 hover:underline">
+      <nav className="flex gap-4 mb-6 border-b dark:border-gray-700 pb-3 text-sm font-medium">
+        <Link href="/admin/tracks" className="text-blue-600 dark:text-blue-400 hover:underline">
           Tracks
         </Link>
-        <Link href="/admin/lessons" className="text-blue-600 hover:underline">
+        <Link href="/admin/lessons" className="text-blue-600 dark:text-blue-400 hover:underline">
           Lessons
         </Link>
-        <Link href="/admin/questions" className="text-blue-600 hover:underline">
+        <Link href="/admin/questions" className="text-blue-600 dark:text-blue-400 hover:underline">
           Questions
         </Link>
       </nav>

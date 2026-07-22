@@ -14,10 +14,10 @@ export default function Card({
   ...props
 }: CardProps) {
   const baseStyles =
-    'rounded-2xl border border-gray-200 bg-white shadow-sm';
+    'rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800';
   const paddingStyles = padded ? 'p-6' : '';
   const hoverStyles = hoverable
-    ? 'transition-shadow duration-200 hover:shadow-md'
+    ? 'transition-shadow duration-200 hover:shadow-md dark:hover:shadow-none'
     : '';
 
   return (

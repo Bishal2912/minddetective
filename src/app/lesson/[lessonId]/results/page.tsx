@@ -59,7 +59,7 @@ export default function ResultsPage({ params }: { params: Promise<{ lessonId: st
   if (!result) {
     return (
       <main className="max-w-2xl mx-auto p-6">
-        <p className="text-gray-500">Loading results...</p>
+        <p className="text-gray-500 dark:text-gray-400">Loading results...</p>
       </main>
     );
   }
@@ -84,7 +84,14 @@ export default function ResultsPage({ params }: { params: Promise<{ lessonId: st
       <div className="flex flex-col items-center gap-4">
         <div className="relative w-32 h-32">
           <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
-            <circle cx="50" cy="50" r="45" fill="none" stroke="#e5e7eb" strokeWidth="8" />
+            <circle
+              cx="50"
+              cy="50"
+              r="45"
+              fill="none"
+              className="stroke-gray-200 dark:stroke-gray-700"
+              strokeWidth="8"
+            />
             <motion.circle
               cx="50"
               cy="50"
@@ -105,9 +112,9 @@ export default function ResultsPage({ params }: { params: Promise<{ lessonId: st
         </div>
 
         <p className="text-lg">
-          XP earned: <span className="font-bold text-blue-600">+<AnimatedNumber value={result.xpEarned} /></span>
+          XP earned: <span className="font-bold text-blue-600 dark:text-blue-400">+<AnimatedNumber value={result.xpEarned} /></span>
         </p>
-        <p className="text-gray-500">
+        <p className="text-gray-500 dark:text-gray-400">
           New total XP: <AnimatedNumber value={result.newTotalXp} />
         </p>
 
@@ -116,7 +123,7 @@ export default function ResultsPage({ params }: { params: Promise<{ lessonId: st
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.6, type: 'spring' }}
-            className="text-green-600 font-semibold"
+            className="text-green-600 dark:text-green-400 font-semibold"
           >
             Mastered ✅
           </motion.p>
@@ -127,7 +134,7 @@ export default function ResultsPage({ params }: { params: Promise<{ lessonId: st
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.8, type: 'spring' }}
-            className="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full font-semibold"
+            className="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-4 py-2 rounded-full font-semibold"
           >
             Level Up! 🎊
           </motion.div>
@@ -138,7 +145,7 @@ export default function ResultsPage({ params }: { params: Promise<{ lessonId: st
         <div className="text-left">
           <button
             onClick={() => setShowMistakes((prev) => !prev)}
-            className="text-blue-600 hover:underline text-sm"
+            className="text-blue-600 dark:text-blue-400 hover:underline text-sm"
           >
             {showMistakes ? 'Hide' : 'Review'} missed questions ({mistakes.length})
           </button>
@@ -150,7 +157,7 @@ export default function ResultsPage({ params }: { params: Promise<{ lessonId: st
                 return (
                   <Card key={m.questionId}>
                     <p className="font-medium">{question?.prompt}</p>
-                    <p className="text-sm text-gray-500 mt-1">{m.explanation}</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{m.explanation}</p>
                   </Card>
                 );
               })}
@@ -164,7 +171,7 @@ export default function ResultsPage({ params }: { params: Promise<{ lessonId: st
           <Button className="px-6">Next Lesson →</Button>
         </Link>
         <Link href="/dashboard">
-          <Button className="px-6 bg-gray-200 text-gray-800 hover:bg-gray-300">Back to Dashboard</Button>
+          <Button className="px-6 bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600">Back to Dashboard</Button>
         </Link>
       </div>
     </main>

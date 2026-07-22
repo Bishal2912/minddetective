@@ -18,13 +18,14 @@ type Track = {
 
 async function fetchTracks(): Promise<Track[]> {
   const response = await fetch('/api/v1/admin/tracks');
-  const result = (await response.json()) as { data?: { tracks: Track[] } };
+  const result = (await response.json()) as { data?: { tracks: Track[] }; error?: { message?: string } };
+  if (!response.ok) throw new Error(result.error?.message ?? 'Failed to load tracks');
   return result.data?.tracks ?? [];
 }
 
 export default function AdminTracksPage() {
   const queryClient = useQueryClient();
-  const { data: tracks } = useQuery({ queryKey: ['admin-tracks'], queryFn: fetchTracks });
+  const { data: tracks, isError: tracksIsError } = useQuery({ queryKey: ['admin-tracks'], queryFn: fetchTracks });
 
   const [title, setTitle] = useState('');
   const [slug, setSlug] = useState('');
@@ -59,12 +60,17 @@ export default function AdminTracksPage() {
     <div className="space-y-6">
       <h1 className="text-xl font-bold">Tracks</h1>
 
+      {tracksIsError && (
+        <p className="text-sm text-red-600 dark:text-red-400">Failed to load tracks. Try refreshing the page.</p>
+      )}
+
       <Card>
         <h2 className="font-semibold mb-3">Add New Track</h2>
         <div className="space-y-2">
-          <Input placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />
-          <Input placeholder="Slug" value={slug} onChange={(e) => setSlug(e.target.value)} />
+          <Input aria-label="Title" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />
+          <Input aria-label="Slug" placeholder="Slug" value={slug} onChange={(e) => setSlug(e.target.value)} />
           <Input
+            aria-label="Description"
             placeholder="Description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
@@ -76,7 +82,7 @@ export default function AdminTracksPage() {
             {createMutation.isPending ? 'Adding...' : '+ Add Track'}
           </Button>
           {createMutation.isError && (
-            <p className="text-sm text-red-600">{(createMutation.error as Error).message}</p>
+            <p className="text-sm text-red-600 dark:text-red-400">{(createMutation.error as Error).message}</p>
           )}
         </div>
       </Card>
@@ -86,13 +92,13 @@ export default function AdminTracksPage() {
           <Card key={track.id} className="flex items-center justify-between">
             <div>
               <p className="font-medium">
-                {track.title} <span className="text-xs text-gray-400">#{track.id}</span>
+                {track.title} <span className="text-xs text-gray-400 dark:text-gray-500">#{track.id}</span>
               </p>
-              <p className="text-sm text-gray-500">{track.slug}</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400">{track.slug}</p>
             </div>
             <Button
               onClick={() => deleteMutation.mutate(track.id)}
-              className="bg-red-100 text-red-700 hover:bg-red-200 text-sm px-3 py-1"
+              className="bg-red-100 text-red-700 hover:bg-red-200 dark:bg-red-950 dark:text-red-300 dark:hover:bg-red-900 text-sm px-3 py-1"
             >
               Delete
             </Button>

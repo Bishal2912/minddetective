@@ -75,16 +75,16 @@ export default function SignupPage() {
   };
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-gray-50 px-4 py-12">
+    <main className="flex min-h-screen items-center justify-center bg-gray-50 dark:bg-gray-950 px-4 py-12">
       <Card className="w-full max-w-md" padded>
         <div className="space-y-6">
           <div className="space-y-2 text-center">
-            <h1 className="text-2xl font-semibold text-gray-900">Create your account</h1>
-            <p className="text-sm text-gray-600">Start your journey with a few simple details.</p>
+            <h1 className="text-2xl font-semibold text-gray-900 dark:text-gray-50">Create your account</h1>
+            <p className="text-sm text-gray-600 dark:text-gray-400">Start your journey with a few simple details.</p>
           </div>
 
           {errorMessage ? (
-            <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+            <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-300">
               {errorMessage}
             </div>
           ) : null}
@@ -125,9 +125,9 @@ export default function SignupPage() {
             </Button>
           </form>
 
-          <p className="text-center text-sm text-gray-600">
+          <p className="text-center text-sm text-gray-600 dark:text-gray-400">
             Already have an account?{' '}
-            <Link href="/login" className="font-medium text-blue-600 hover:text-blue-700">
+            <Link href="/login" className="font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
               Log in
             </Link>
           </p>

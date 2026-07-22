@@ -96,7 +96,7 @@ export default function LessonPage({ params }: { params: Promise<{ lessonId: str
   if (isLoading) {
     return (
       <main className="max-w-2xl mx-auto p-6">
-        <p className="text-gray-500">Loading lesson...</p>
+        <p className="text-gray-500 dark:text-gray-400">Loading lesson...</p>
       </main>
     );
   }
@@ -104,7 +104,7 @@ export default function LessonPage({ params }: { params: Promise<{ lessonId: str
   if (isError) {
     return (
       <main className="max-w-2xl mx-auto p-6">
-        <p className="text-red-600">{(error as Error).message}</p>
+        <p className="text-red-600 dark:text-red-400">{(error as Error).message}</p>
       </main>
     );
   }
@@ -129,17 +129,28 @@ export default function LessonPage({ params }: { params: Promise<{ lessonId: str
 
   return (
     <main className="max-w-2xl mx-auto p-6 space-y-6">
-      <p className="text-sm text-gray-400">
+      <p className="text-sm text-gray-400 dark:text-gray-500">
         Question {currentIndex + 1} of {questions.length}
       </p>
       <h1 className="text-xl font-semibold">{currentQuestion?.prompt}</h1>
-      <div className="space-y-3">
+      <div className="space-y-3" role="radiogroup" aria-label="Answer options">
         {currentQuestion?.options.map((option) => (
           <Card
             key={option.id}
+            role="radio"
+            aria-checked={selectedOptionId === option.id}
+            tabIndex={0}
             onClick={() => selectOption(option.id)}
-            className={`cursor-pointer border-2 ${
-              selectedOptionId === option.id ? 'border-blue-500 bg-blue-50' : 'border-transparent'
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                selectOption(option.id);
+              }
+            }}
+            className={`cursor-pointer border-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${
+              selectedOptionId === option.id
+                ? 'border-blue-500 bg-blue-50 dark:bg-blue-950'
+                : 'border-transparent'
             }`}
           >
             {option.label}
@@ -147,7 +158,7 @@ export default function LessonPage({ params }: { params: Promise<{ lessonId: str
         ))}
       </div>
       {mutation.isError && (
-        <p className="text-sm text-red-600">{(mutation.error as Error).message}</p>
+        <p className="text-sm text-red-600 dark:text-red-400">{(mutation.error as Error).message}</p>
       )}
       <Button
         onClick={goNext}
