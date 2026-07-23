@@ -1,8 +1,10 @@
 'use client';
 
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useQuery } from '@tanstack/react-query';
 
+import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import { calculateLevel } from '@/lib/xp-engine';
 
@@ -24,6 +26,7 @@ async function fetchProgress(): Promise<TrackProgress[]> {
 }
 
 export default function ProfilePage() {
+  const router = useRouter();
   const { data: me, isLoading: meLoading, isError: meIsError } = useQuery({ queryKey: ['me'], queryFn: fetchMe });
   const { data: progress, isLoading: progressLoading, isError: progressIsError } = useQuery({
     queryKey: ['progress'],
@@ -48,6 +51,7 @@ export default function ProfilePage() {
 
   const level = me ? calculateLevel(me.xp) : 1;
   const initial = me?.name?.charAt(0).toUpperCase() ?? '?';
+  const hasStartedAnyLesson = progress?.some((track) => track.completed_lessons > 0) ?? false;
 
   return (
     <main className="max-w-2xl mx-auto p-6 space-y-6">
@@ -73,30 +77,38 @@ export default function ProfilePage() {
         {progressIsError && (
           <p className="text-sm text-red-600 dark:text-red-400">Couldn&apos;t load your progress. Try refreshing the page.</p>
         )}
-        <div className="space-y-3">
-          {progress?.map((track) => {
-            const percent =
-              track.total_lessons > 0
-                ? Math.round((track.completed_lessons / track.total_lessons) * 100)
-                : 0;
-            return (
-              <Card key={track.track_id}>
-                <div className="flex justify-between mb-1">
-                  <span className="font-medium">{track.track_title}</span>
-                  <span className="text-sm text-gray-500 dark:text-gray-400">
-                    {track.completed_lessons}/{track.total_lessons} lessons
-                  </span>
-                </div>
-                <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                  <div
-                    className="bg-blue-500 h-2 rounded-full transition-all"
-                    style={{ width: `${percent}%` }}
-                  />
-                </div>
-              </Card>
-            );
-          })}
-        </div>
+        {progress && !hasStartedAnyLesson && (
+          <Card>
+            <p className="text-gray-600 dark:text-gray-300 mb-3">You haven&apos;t started any lessons yet.</p>
+            <Button onClick={() => router.push('/tracks')}>Start your first lesson</Button>
+          </Card>
+        )}
+        {progress && hasStartedAnyLesson && (
+          <div className="space-y-3">
+            {progress.map((track) => {
+              const percent =
+                track.total_lessons > 0
+                  ? Math.round((track.completed_lessons / track.total_lessons) * 100)
+                  : 0;
+              return (
+                <Card key={track.track_id}>
+                  <div className="flex justify-between mb-1">
+                    <span className="font-medium">{track.track_title}</span>
+                    <span className="text-sm text-gray-500 dark:text-gray-400">
+                      {track.completed_lessons}/{track.total_lessons} lessons
+                    </span>
+                  </div>
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                    <div
+                      className="bg-blue-500 h-2 rounded-full transition-all"
+                      style={{ width: `${percent}%` }}
+                    />
+                  </div>
+                </Card>
+              );
+            })}
+          </div>
+        )}
       </div>
 
       <div>

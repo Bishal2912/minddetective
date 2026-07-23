@@ -11,6 +11,10 @@ export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const hasSessionCookie = request.cookies.has('session_id');
 
+  if (pathname === '/' && hasSessionCookie) {
+    return NextResponse.redirect(new URL('/dashboard', request.url));
+  }
+
   const isProtectedRoute = protectedPrefixes.some((prefix) => pathname.startsWith(prefix));
   const isLoggedOutOnlyRoute = loggedOutOnlyPaths.includes(pathname);
 
