@@ -43,3 +43,6 @@ next-env.d.ts
 # wrangler / cloudflare
 /.wrangler
 /.open-next
+
+# claude code
+/.claude
